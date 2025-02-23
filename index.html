@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda de Galos</title>    
+    <title>Venda de Galos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f2f2f2;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -18,15 +19,18 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .product {
             margin-bottom: 20px;
         }
-        .product img {
-            width: 300px; /* Defina a largura desejada */
-            height: 300px; /* Defina a altura desejada */
-            object-fit: cover; /* Faz a imagem preencher a área definida mantendo a proporção */
-            border-radius: 10px;
-        }
+
+            .product img {
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
         .whatsapp-link {
             display: inline-block;
             margin-top: 20px;
@@ -36,24 +40,25 @@
             border-radius: 5px;
             text-decoration: none;
         }
+
+        .message-input {
+            width: 80%;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Fotos dos Galos</h2>
-        
+
         <div class="product">
             <img src="galos/galo300-1.jpg" alt="Produto 1">
             <h2>Belo Galinaceo de grande belesa e desempenho</h2>
             <h1>R$ 2000,00</h1>
         </div>
-        
-        <!-- 
-        <div class="product">
-            <img src="galos/galo2.jpeg" alt="Produto 2">
-            <p>Especime incansavel e robusta</p>
-        </div>
-        -->
 
         <div class="product">
             <img src="galos/galo300-3.jpg" alt="Produto 3">
@@ -66,11 +71,20 @@
             <h2>Belo Galináceo esmagador</h2>
             <h1>R$ 2000,00</h1>
         </div>
-        <!-- Adicione mais produtos conforme necessário -->
 
-        <a href="https://wa.me/+5521960160355" class="whatsapp-link" target="_blank">Contate-nos no WhatsApp</a>
+        <!-- Campo para o usuário personalizar a mensagem -->
+        <input type="text" id="whatsappMessage" class="message-input" placeholder="Digite sua mensagem...">
+
+        <!-- Botão para enviar a mensagem -->
+        <a href="#" class="whatsapp-link" id="sendMessage" target="_blank">Contate-nos no WhatsApp</a>
     </div>
+
+    <script>document.getElementById("sendMessage").addEventListener("click", function(event) {
+            event.preventDefault();
+            const message = document.getElementById("whatsappMessage").value;
+            const phoneNumber = "+5521960160355";
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        });</script>
 </body>
 </html>
-
-
