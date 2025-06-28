@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem somos nos</title>
-    <style>
-        img {
-
-            width: 500px;
-            margin: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        .meio {
-
-            text-align: center;
-        }
-
-    </style>
+    <link rel="stylesheet" href="templates/style.css">
+    <title>Venda de Galos</title>
 </head>
-<body>
-    <h1 class="meio">EM CONTRUÇÃO</h1>
-    <img src="obras.jpg" alt="placa em obras">
-    <p class="meio"><a href="https://brunoestevamrj.github.io/galos/index.html">Voltar</a></p>
-
-
+<body class="fade">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/galeria.html">Galeria</a></li>
+            <li><a href="pages/quem-somos-nos.html">Quem Somos Nós</a></li>
+            <li><a href="pages/contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
     
+    <div class="container">
+        
+
+        <div class="product">
+            <img src="instinto.jpg" alt="Produto 1">
+            <h2>Belo Galinaceos de grande beleza e desempenho</h2>
+        
+        
+        </div>
+        
+        <hr class="hr-shadow">
+
+        
+
+
+        <!-- Campo para o usuário personalizar a mensagem -->
+        <input type="text" id="whatsappMessage" class="message-input" placeholder="Digite sua mensagem...">
+
+        <!-- Botão para enviar a mensagem -->
+        <a href="#" class="whatsapp-link" id="sendMessage" target="_blank">Contate-nos via WhatsApp</a>
+    </div>
+
+    <script src="templates/script.js"></script>
 </body>
 </html>
